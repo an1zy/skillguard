@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="420" viewBox="0 0 840 420">
+<defs><linearGradient id="sgBench" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#ef4444"/>
+</linearGradient></defs>
+<rect width="840" height="420" rx="16" fill="#09090b"/>
+<rect x="12" y="12" width="816" height="396" rx="14" fill="#111116" stroke="#27272a"/>
+<rect x="12" y="12" width="816" height="4" rx="2" fill="url(#sgBench)"/>
+<text x="36" y="50" fill="#fafafa" font-size="18" font-weight="800" font-family="system-ui, -apple-system, Segoe UI, sans-serif">SKILLGUARD PUBLIC ECOSYSTEM AUDIT</text>
+<text x="804" y="50" text-anchor="end" fill="#a1a1aa" font-size="12" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">27 MCP &amp; Skill repos · 10,849 files scanned</text>
+<line x1="36" y1="68" x2="804" y2="68" stroke="#1f1f27"/>
+<text x="36" y="96" fill="#71717a" font-size="11" font-weight="700" letter-spacing="1.2" font-family="system-ui, -apple-system, Segoe UI, sans-serif">AUDIT VERDICT DISTRIBUTION</text>
+<rect x="36" y="114" width="768" height="38" rx="8" fill="#0d1117" stroke="#1f2937"/>
+<text x="50" y="137" fill="#f4f4f5" font-size="12.5" font-weight="600" font-family="system-ui, -apple-system, Segoe UI, sans-serif">VERIFIED (0% clean)</text>
+<rect x="360" y="127" width="340" height="12" rx="6" fill="#18181b"/>
+<rect x="360" y="127" width="252" height="12" rx="6" fill="#10b981"/>
+<text x="790" y="137" text-anchor="end" fill="#10b981" font-size="12.5" font-weight="800" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">20/27 repos</text>
+<rect x="36" y="164" width="768" height="38" rx="8" fill="#0d1117" stroke="#1f2937"/>
+<text x="50" y="187" fill="#f4f4f5" font-size="12.5" font-weight="600" font-family="system-ui, -apple-system, Segoe UI, sans-serif">HIGH RISK / MALICIOUS (flagged patterns)</text>
+<rect x="360" y="177" width="340" height="12" rx="6" fill="#18181b"/>
+<rect x="360" y="177" width="88" height="12" rx="6" fill="#ef4444"/>
+<text x="790" y="187" text-anchor="end" fill="#ef4444" font-size="12.5" font-weight="800" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">7/27 repos</text>
+<text x="36" y="246" fill="#71717a" font-size="11" font-weight="700" letter-spacing="1.2" font-family="system-ui, -apple-system, Segoe UI, sans-serif">RISK PATTERNS DETECTED ACROSS PUBLIC REPOS</text>
+<text x="36" y="278" fill="#e4e4e7" font-size="11.5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">obfuscated-exec</text>
+<rect x="214" y="269" width="130" height="10" rx="5" fill="#18181b"/>
+<rect x="214" y="269" width="130" height="10" rx="5" fill="#fb923c"/>
+<text x="404" y="278" text-anchor="end" fill="#a1a1aa" font-size="12" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">82</text>
+<text x="428" y="278" fill="#e4e4e7" font-size="11.5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">prompt-injection</text>
+<rect x="606" y="269" width="130" height="10" rx="5" fill="#18181b"/>
+<rect x="606" y="269" width="24" height="10" rx="5" fill="#f43f5e"/>
+<text x="796" y="278" text-anchor="end" fill="#a1a1aa" font-size="12" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">15</text>
+<text x="36" y="312" fill="#e4e4e7" font-size="11.5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">hidden-prompt-comment</text>
+<rect x="214" y="303" width="130" height="10" rx="5" fill="#18181b"/>
+<rect x="214" y="303" width="13" height="10" rx="5" fill="#f97316"/>
+<text x="404" y="312" text-anchor="end" fill="#a1a1aa" font-size="12" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">8</text>
+<text x="428" y="312" fill="#e4e4e7" font-size="11.5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">credential-harvest</text>
+<rect x="606" y="303" width="130" height="10" rx="5" fill="#18181b"/>
+<rect x="606" y="303" width="11" height="10" rx="5" fill="#fb7185"/>
+<text x="796" y="312" text-anchor="end" fill="#a1a1aa" font-size="12" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">7</text>
+<text x="36" y="346" fill="#e4e4e7" font-size="11.5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">unicode-smuggling</text>
+<rect x="214" y="337" width="130" height="10" rx="5" fill="#18181b"/>
+<rect x="214" y="337" width="8" height="10" rx="5" fill="#ef4444"/>
+<text x="404" y="346" text-anchor="end" fill="#a1a1aa" font-size="12" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">4</text>
+<text x="428" y="346" fill="#e4e4e7" font-size="11.5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">unsafe-mcp-config</text>
+<rect x="606" y="337" width="130" height="10" rx="5" fill="#18181b"/>
+<rect x="606" y="337" width="8" height="10" rx="5" fill="#facc15"/>
+<text x="796" y="346" text-anchor="end" fill="#a1a1aa" font-size="12" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">2</text>
+<text x="36" y="400" fill="#52525b" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">pip install skillguard · uvx skillguard scan .</text>
+<text x="804" y="400" text-anchor="end" fill="#52525b" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif">github.com/an1zy/skillguard</text>
+</svg>

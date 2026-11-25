@@ -1,0 +1,72 @@
+name: "SkillGuard"
+description: "Audit AI Agent Skills (SKILL.md), .cursorrules, and MCP servers for prompt injection, Unicode smuggling, and credential theft."
+author: "an1zy"
+
+branding:
+  icon: "lock"
+  color: "green"
+
+inputs:
+  path:
+    description: "Directory or file to scan"
+    required: false
+    default: "."
+  max-risk:
+    description: "Maximum acceptable Risk Score (0-100)"
+    required: false
+    default: "20"
+  comment-pr:
+    description: "Post or update a sticky SkillGuard security comment on pull requests"
+    required: false
+    default: "true"
+  fail-on-exceed:
+    description: "Fail workflow when Risk Score exceeds max-risk"
+    required: false
+    default: "true"
+  svg-path:
+    description: "Optional output path for Trust Card SVG"
+    required: false
+    default: ""
+  python-version:
+    description: "Python version"
+    required: false
+    default: "3.11"
+
+outputs:
+  risk-score:
+    description: "Computed Risk Score (0-100)"
+    value: ${{ steps.audit.outputs.risk-score }}
+  verdict:
+    description: "Verdict label (VERIFIED, CAUTION, HIGH RISK, MALICIOUS)"
+    value: ${{ steps.audit.outputs.verdict }}
+  badge-url:
+    description: "shields.io Trust Badge URL"
+    value: ${{ steps.audit.outputs.badge-url }}
+  findings-count:
+    description: "Number of security findings"
+    value: ${{ steps.audit.outputs.findings-count }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ inputs.python-version }}
+
+    - name: Install SkillGuard
+      shell: bash
+      run: python -m pip install --quiet "${{ github.action_path }}"
+
+    - name: Run SkillGuard Audit
+      id: audit
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      run: |
+        python -m skillguard.github_action \
+          --path "${{ inputs.path }}" \
+          --max-risk "${{ inputs.max-risk }}" \
+          --comment-pr "${{ inputs.comment-pr }}" \
+          --fail-on-exceed "${{ inputs.fail-on-exceed }}" \
+          --svg-path "${{ inputs.svg-path }}"
